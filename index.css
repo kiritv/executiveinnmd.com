@@ -897,14 +897,24 @@ img {
     padding: 14px;
   }
   .mobile-nav-toggle {
-    display: block;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: none;
     color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
-    padding: 6px 10px;
-    z-index: 100000;
+    padding: 10px 14px;
+    min-width: 48px;
+    min-height: 48px;
+    position: relative;
+    z-index: 1000000;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .mobile-nav-toggle i {
+    pointer-events: none;
   }
   .mobile-sticky-bar {
     display: grid;

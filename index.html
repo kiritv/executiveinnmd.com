@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://www.executiveinnmd.com/assets/images/corporate-3-1920x980.jpg">
 
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=5.0">
+  <link rel="stylesheet" href="index.css?v=6.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org JSON-LD for Hotel -->
@@ -104,7 +104,7 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="mobile-nav-toggle" id="mobileToggle" onclick="toggleMobileNav(event)" ontouchstart="toggleMobileNav(event)" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
@@ -468,20 +468,30 @@
       });
     });
   </script>
+  
   <script>
-    (function() {
-      var btn = document.getElementById('mobileToggle');
-      var menu = document.getElementById('navMenu');
-      if (btn && menu) {
-        btn.onclick = function(e) {
-          if (e) e.preventDefault();
-          menu.classList.toggle('active');
-        };
+    var lastToggleTime = 0;
+    function toggleMobileNav(e) {
+      var now = Date.now();
+      if (now - lastToggleTime < 350) {
+        if (e && e.preventDefault) e.preventDefault();
+        return false;
       }
-      document.querySelectorAll('.copyright-year').forEach(function(el) {
-        el.textContent = new Date().getFullYear();
-      });
-    })();
+      lastToggleTime = now;
+      if (e && e.preventDefault) e.preventDefault();
+      var menu = document.getElementById('navMenu');
+      if (menu) {
+        var isHidden = getComputedStyle(menu).display === 'none';
+        if (isHidden) {
+          menu.style.setProperty('display', 'flex', 'important');
+          menu.classList.add('active');
+        } else {
+          menu.style.setProperty('display', 'none', 'important');
+          menu.classList.remove('active');
+        }
+      }
+      return false;
+    }
   </script>
 </body>
 </html>
