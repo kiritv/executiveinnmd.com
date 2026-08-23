@@ -245,21 +245,66 @@ img {
   font-family: var(--font-serif);
   font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   line-height: 1.15;
   color: #ffffff;
   text-shadow: 0 4px 18px rgba(0,0,0,0.95), 0 2px 6px rgba(0,0,0,0.9);
 }
 
-.hero-subtitle {
-  font-size: 1.25rem;
+.hero-phone-number {
+  font-size: 1.4rem;
   color: #ffffff;
-  margin-bottom: 32px;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 400;
+  margin-bottom: 24px;
+  font-weight: 600;
   text-shadow: 0 3px 12px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+}
+
+.hero-phone-number a {
+  color: #38bdf8;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+.hero-phone-number a:hover {
+  color: #7dd3fc;
+}
+
+.nav-phone-btn {
+  background-color: rgba(2, 132, 199, 0.15);
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.nav-phone-btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+}
+
+.btn-phone {
+  background-color: #16a34a;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
+}
+
+.btn-phone:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 .hero-actions {
