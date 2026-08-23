@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="version-switcher.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Executive Inn &amp; Suites Upper Marlboro MD | Hotel near Showplace Arena</title>
@@ -22,7 +23,7 @@
   <meta name="twitter:image" content="https://www.executiveinnmd.com/assets/images/corporate-3-1920x980.jpg">
 
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=10.0">
+  <link rel="stylesheet" href="index.css?v=14.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org JSON-LD for Hotel -->
@@ -119,19 +120,28 @@
           </a>
         </li>
       </ul>
+      <div class="version-switcher-container">
+          <i class="fa-solid fa-sliders" style="color: #60a5fa; font-size: 0.85rem;"></i>
+          <select class="version-switcher-select" onchange="setSiteVersion(this.value)" aria-label="Select Content View">
+            <option value="enhanced">✨ Modern View</option>
+            <option value="classic">🏛️ Classic View</option>
+          </select>
+        </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Executive Inn &amp; Suites</h1>
+      <h1 class="hero-title"><span class="version-classic">Executive Inn &amp; Suites</span><span class="version-enhanced">Your Peaceful Capital Gateway &amp; Comfort Suite Stay</span></h1>
+      <p class="hero-subtitle version-enhanced" style="margin-bottom: 20px; font-size: 1.1rem; opacity: 0.95; font-weight: 300;">Discover refined comfort and quiet relaxation in Upper Marlboro — just minutes from Showplace Arena, Joint Base Andrews, and Downtown Washington D.C.</p>
       <div class="hero-actions">
         <a href="tel:+13016273969" class="btn-book" style="padding: 14px 32px; font-size: 0.95rem;">
           <i class="fa-solid fa-phone"></i> Call +1-301-627-3969
         </a>
         <a href="rooms.html" class="btn-secondary">
-          View Rooms &amp; Rates <i class="fa-solid fa-arrow-right"></i>
+          <span class="version-classic">View Rooms &amp; Rates <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="version-enhanced">Explore Suites &amp; Rates <i class="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
     </div>
@@ -176,16 +186,26 @@
     <div class="container">
       <div class="section-title-wrap">
         <span class="section-subtitle">Comfort &amp; Executive Service</span>
-        <h2 class="section-title">Welcome to Executive Inn &amp; Suites</h2>
+        <h2 class="section-title"><span class="version-classic">Welcome to Executive Inn &amp; Suites</span><span class="version-enhanced">Exceptional Value &amp; Timeless Comfort Near the Nation’s Capital</span></h2>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
         <div>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
-            <strong>Executive Inn &amp; Suites</strong> is conveniently located off Interstate 495 on Crain Highway in Upper Marlboro, MD. Situated less than 2 miles from <strong>Showplace Arena</strong> and short drives from <strong>Joint Base Andrews</strong>, <strong>National Harbor</strong>, and <strong>Downtown Washington D.C.</strong>, our hotel provides the ideal home base for business executives, event attendees, and vacationing families.
-          </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
-            Enjoy clean, quiet rooms equipped with 38-inch LED TVs, coffee makers, hair dryers, irons, microwaves, refrigerators, and endless hot water for a comfortable and restful stay.
-          </p>
+          <div class="version-classic">
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
+              <strong>Executive Inn &amp; Suites</strong> is conveniently located off Interstate 495 on Crain Highway in Upper Marlboro, MD. Situated less than 2 miles from <strong>Showplace Arena</strong> and short drives from <strong>Joint Base Andrews</strong>, <strong>National Harbor</strong>, and <strong>Downtown Washington D.C.</strong>, our hotel provides the ideal home base for business executives, event attendees, and vacationing families.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
+              Enjoy clean, quiet rooms equipped with 38-inch LED TVs, coffee makers, hair dryers, irons, microwaves, refrigerators, and endless hot water for a comfortable and restful stay.
+            </p>
+          </div>
+          <div class="version-enhanced">
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
+              Positioned just off Interstate 495 on Crain Highway, <strong>Executive Inn &amp; Suites</strong> combines peaceful suburban tranquility with effortless access to the Nation's Capital. Whether you are traveling for military assignments at <strong>Joint Base Andrews</strong>, major events at <strong>Showplace Arena</strong>, or leisure trips to <strong>National Harbor</strong> and <strong>Downtown D.C.</strong>, our pristine accommodations deliver unmatched value and peaceful relaxation.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
+              Every guest room is thoughtfully appointed with modern conveniences including 38-inch HD TVs, in-room coffee makers, microwave and refrigerator setups, micro-plush bedding, and endless hot water systems for a rejuvenating stay.
+            </p>
+          </div>
           <a href="https://live.ipms247.com/booking/book-rooms-executiveinnandsuites" target="_blank" class="btn-book">
             <i class="fa-solid fa-bed"></i> Book Direct &amp; Save
           </a>
