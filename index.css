@@ -880,7 +880,7 @@ img {
 /* Accessibility Widget Styles */
 #a11y-toggle-btn {
   position: fixed;
-  bottom: 85px;
+  bottom: 28vh;
   left: 20px;
   z-index: 99999;
   width: 48px;
@@ -905,7 +905,7 @@ img {
 
 #a11y-panel {
   position: fixed;
-  bottom: 145px;
+  bottom: calc(28vh + 60px);
   left: 20px;
   z-index: 99999;
   width: 310px;
