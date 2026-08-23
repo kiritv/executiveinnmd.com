@@ -7,7 +7,7 @@
   <meta name="description" content="Explore dining options and restaurants near Executive Inn &amp; Suites Upper Marlboro MD including Ledo Pizza, Jerry's Seafood, Dunkin, Subway, McDonald's, KFC, Wendy's, Arby's, and China Taste.">
   <link rel="canonical" href="https://www.executiveinnmd.com/dining.html">
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=3.0">
+  <link rel="stylesheet" href="index.css?v=3.1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle"><i class="fa-solid fa-bars"></i></button>
+      <button class="mobile-nav-toggle" id="mobileToggle" onclick="document.getElementById('navMenu').classList.toggle('active')" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
@@ -178,14 +178,8 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navMenu').classList.toggle('active');
-    });
-  </script>
-  <script>
-    document.querySelectorAll('.copyright-year').forEach(el => el.textContent = new Date().getFullYear());
-  </script>
+  
+  
 
   <!-- Mobile Sticky Bar -->
   <div class="mobile-sticky-bar">
@@ -198,11 +192,21 @@
   </div>
 
 
+  
+
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navMenu').classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobileToggle');
+      var menu = document.getElementById('navMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          menu.classList.toggle('active');
+        });
+      }
+      document.querySelectorAll('.copyright-year').forEach(function(el) {
+        el.textContent = new Date().getFullYear();
+      });
     });
   </script>
-
 </body>
 </html>

@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://www.executiveinnmd.com/assets/images/corporate-3-1920x980.jpg">
 
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=3.0">
+  <link rel="stylesheet" href="index.css?v=3.1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org JSON-LD for Hotel -->
@@ -104,9 +104,7 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <button class="mobile-nav-toggle" id="mobileToggle" onclick="document.getElementById('navMenu').classList.toggle('active')" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
@@ -454,13 +452,21 @@
     </a>
   </div>
 
+  
+
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navMenu').classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobileToggle');
+      var menu = document.getElementById('navMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+          menu.classList.toggle('active');
+        });
+      }
+      document.querySelectorAll('.copyright-year').forEach(function(el) {
+        el.textContent = new Date().getFullYear();
+      });
     });
-  </script>
-<script>
-    document.querySelectorAll('.copyright-year').forEach(el => el.textContent = new Date().getFullYear());
   </script>
 </body>
 </html>
