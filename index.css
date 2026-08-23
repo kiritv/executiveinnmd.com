@@ -880,8 +880,9 @@ img {
 /* Accessibility Widget Styles */
 #a11y-toggle-btn {
   position: fixed;
-  bottom: 28vh;
+  top: 50%;
   left: 20px;
+  transform: translateY(-50%);
   z-index: 99999;
   width: 48px;
   height: 48px;
@@ -899,14 +900,15 @@ img {
 }
 
 #a11y-toggle-btn:hover {
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
   background: #0369a1;
 }
 
 #a11y-panel {
   position: fixed;
-  bottom: calc(28vh + 60px);
-  left: 20px;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
   z-index: 99999;
   width: 310px;
   background: #0f172a;
