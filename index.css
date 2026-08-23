@@ -822,6 +822,20 @@ img {
 
 @media (max-width: 768px) {
   .header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .header-top-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .header-social {
     display: none;
   }
   .nav-menu {
