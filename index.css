@@ -851,16 +851,21 @@ img {
   }
   .nav-menu {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 76px;
     left: 0;
-    width: 100%;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: calc(100vh - 76px);
     background: #0f172a;
     flex-direction: column;
-    padding: 20px 24px;
+    padding: 24px 20px 100px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
-    z-index: 99999;
+    z-index: 999999;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav-menu.active {
     display: flex !important;
@@ -871,9 +876,10 @@ img {
   }
   .nav-menu .nav-link {
     display: block;
-    padding: 12px 0;
-    font-size: 1.1rem;
-    color: #ffffff;
+    padding: 14px 16px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #ffffff !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .nav-menu .nav-phone-btn {
