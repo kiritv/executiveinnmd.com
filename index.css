@@ -826,8 +826,8 @@ img {
     display: none;
   }
   .hero {
-    min-height: 60vh;
-    padding: 30px 16px 40px;
+    min-height: 80vh;
+    padding: 30px 16px 50px;
   }
   .hero-title {
     font-size: 2.2rem;

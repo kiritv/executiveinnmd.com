@@ -7,7 +7,7 @@
   <meta name="description" content="Contact Executive Inn &amp; Suites in Upper Marlboro MD. Find phone numbers, map directions, email address, and direct online room reservations.">
   <link rel="canonical" href="https://www.executiveinnmd.com/contactus.html">
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=4.0">
+  <link rel="stylesheet" href="index.css?v=5.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle" onclick="document.getElementById('navMenu').classList.toggle('active')" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
@@ -134,6 +134,21 @@
         el.textContent = new Date().getFullYear();
       });
     });
+  </script>
+  <script>
+    (function() {
+      var btn = document.getElementById('mobileToggle');
+      var menu = document.getElementById('navMenu');
+      if (btn && menu) {
+        btn.onclick = function(e) {
+          if (e) e.preventDefault();
+          menu.classList.toggle('active');
+        };
+      }
+      document.querySelectorAll('.copyright-year').forEach(function(el) {
+        el.textContent = new Date().getFullYear();
+      });
+    })();
   </script>
 </body>
 </html>
