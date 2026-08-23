@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://www.executiveinnmd.com/assets/images/corporate-3-1920x980.jpg">
 
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=6.0">
+  <link rel="stylesheet" href="index.css?v=7.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org JSON-LD for Hotel -->
@@ -79,7 +79,7 @@
       <a href="https://goo.gl/maps/h1s1gSwGKWCaCMSU7" target="_blank">
         <i class="fa-solid fa-location-dot"></i> 2901 Crain Highway, Upper Marlboro, MD 20774
       </a>
-      <a href="tel:+13016273969" class="header-phone-btn">
+      <a href="tel:+13016273969">
         <i class="fa-solid fa-phone"></i> +1-301-627-3969
       </a>
       <a href="mailto:executiveinnandsuites2901@gmail.com">
@@ -104,18 +104,15 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle" onclick="toggleMobileNav(event)" ontouchstart="toggleMobileNav(event)" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
         <li><a href="attractions.html" class="nav-link">Attractions</a></li>
         <li><a href="dining.html" class="nav-link">Dining</a></li>
         <li><a href="contactus.html" class="nav-link">Contact Us</a></li>
-        <li>
-          <a href="tel:+13016273969" class="nav-phone-btn">
-            <i class="fa-solid fa-phone"></i> (301) 627-3969
-          </a>
-        </li>
         <li>
           <a href="https://live.ipms247.com/booking/book-rooms-executiveinnandsuites" target="_blank" class="btn-book">
             <i class="fa-solid fa-calendar-check"></i> Book Now
@@ -128,13 +125,15 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi Suites</span>
       <h1 class="hero-title">Executive Inn &amp; Suites</h1>
+      <p class="hero-subtitle">Premium comfort &amp; executive amenities in Upper Marlboro MD. Minutes from Showplace Arena, and Washington D.C.</p>
       <div class="hero-actions">
         <a href="https://live.ipms247.com/booking/book-rooms-executiveinnandsuites" target="_blank" class="btn-book" style="padding: 14px 32px; font-size: 0.95rem;">
           <i class="fa-solid fa-calendar-days"></i> Reserve Your Stay Online
         </a>
         <a href="rooms.html" class="btn-secondary">
-          View Rooms &amp; Rates <i class="fa-solid fa-arrow-right"></i>
+          View Jacuzzi Rooms &amp; Rates <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
     </div>
@@ -184,10 +183,10 @@
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
         <div>
           <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
-            <strong>Executive Inn &amp; Suites</strong> is conveniently located off Interstate 495 on Crain Highway in Upper Marlboro, MD. Situated less than 2 miles from <strong>Showplace Arena</strong> and short drives from <strong>Joint Base Andrews</strong>, <strong>National Harbor</strong>, and <strong>Downtown Washington D.C.</strong>, our hotel provides the ideal home base for business executives, event attendees, and vacationing families.
+            <strong>Executive Inn &amp; Suites</strong> is conveniently located off Interstate 495 on Crain Highway in Upper Marlboro, MD. Situated less than 2 miles from <strong>Showplace Arena</strong> and short drives from <strong></strong>, <strong></strong>, and <strong>Joint Base Andrews</strong>, our hotel provides the ideal home base for business executives, event attendees, and vacationing families.
           </p>
           <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
-            Enjoy clean, quiet rooms equipped with 38-inch LED TVs, coffee makers, hair dryers, irons, microwaves, refrigerators, and endless hot water for a comfortable and restful stay.
+            Enjoy clean, quiet rooms equipped with 38-inch LED TVs, coffee makers, hair dryers, irons, microwaves, refrigerators, and endless hot water. Unwind in our luxurious King Jacuzzi Suites or enjoy our !
           </p>
           <a href="https://live.ipms247.com/booking/book-rooms-executiveinnandsuites" target="_blank" class="btn-book">
             <i class="fa-solid fa-bed"></i> Book Direct &amp; Save
@@ -452,46 +451,13 @@
     </a>
   </div>
 
-  
-
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var btn = document.getElementById('mobileToggle');
-      var menu = document.getElementById('navMenu');
-      if (btn && menu) {
-        btn.addEventListener('click', function(e) {
-          menu.classList.toggle('active');
-        });
-      }
-      document.querySelectorAll('.copyright-year').forEach(function(el) {
-        el.textContent = new Date().getFullYear();
-      });
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
     });
   </script>
-  
-  <script>
-    var lastToggleTime = 0;
-    function toggleMobileNav(e) {
-      var now = Date.now();
-      if (now - lastToggleTime < 350) {
-        if (e && e.preventDefault) e.preventDefault();
-        return false;
-      }
-      lastToggleTime = now;
-      if (e && e.preventDefault) e.preventDefault();
-      var menu = document.getElementById('navMenu');
-      if (menu) {
-        var isHidden = getComputedStyle(menu).display === 'none';
-        if (isHidden) {
-          menu.style.setProperty('display', 'flex', 'important');
-          menu.classList.add('active');
-        } else {
-          menu.style.setProperty('display', 'none', 'important');
-          menu.classList.remove('active');
-        }
-      }
-      return false;
-    }
+<script>
+    document.querySelectorAll('.copyright-year').forEach(el => el.textContent = new Date().getFullYear());
   </script>
 </body>
 </html>
