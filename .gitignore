@@ -1,0 +1,18 @@
+# Credentials & Secrets
+[Cc]redential*.txt
+[Cc]redential*.json
+*.pem
+*.key
+.env
+.env.*
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Scratch & Temp Files
+scratch/
+temp/
+*.log
