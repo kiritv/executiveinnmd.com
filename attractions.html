@@ -7,7 +7,7 @@
   <meta name="description" content="Discover top attractions near Executive Inn &amp; Suites Upper Marlboro MD including Showplace Arena, Andrews AFB, National Harbor, and Washington D.C.">
   <link rel="canonical" href="https://www.executiveinnmd.com/attractions.html">
   <link rel="icon" href="assets/images/banner01-128x85.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=2.0">
+  <link rel="stylesheet" href="index.css?v=2.1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -59,45 +59,56 @@
   <section class="section">
     <div class="container">
       <div class="card-list-grid">
-
-        <div class="list-item-card">
+<div class="list-item-card">
           <img src="assets/images/show-place-arena-278x181.jpg" alt="Showplace Arena" class="list-item-img">
           <div class="list-item-content">
             <span class="list-item-distance"><i class="fa-solid fa-car"></i> 1.8 Miles Away</span>
             <h3 class="list-item-title">Showplace Arena</h3>
             <p class="list-item-desc">A major 5,800-seat multi-purpose arena host to equestrian championships, trade shows, concerts, and graduations.</p>
             <div class="list-item-address"><i class="fa-solid fa-location-dot"></i> 14900 Pennsylvania Ave, Upper Marlboro MD 20774</div>
+          </div>
         </div>
 
-        <div class="list-item-card">
+<div class="list-item-card">
           <img src="assets/images/andrew-air-force-base-300x168.jpg" alt="Andrews Air Force Base" class="list-item-img">
           <div class="list-item-content">
             <span class="list-item-distance"><i class="fa-solid fa-car"></i> 10.5 Miles Away</span>
             <h3 class="list-item-title">Joint Base Andrews</h3>
             <p class="list-item-desc">Strategic U.S. Air Force facility under jurisdiction of the 11th Wing, famous for housing Air Force One.</p>
             <div class="list-item-address"><i class="fa-solid fa-location-dot"></i> 4520 Wheeling Rd, Clinton MD 20735</div>
-        <div class="list-item-card">
+          </div>
+        </div>
+
+<div class="list-item-card">
           <img src="assets/images/the-lincoln-memorial-800x533.jpg" alt="Lincoln Memorial" class="list-item-img">
           <div class="list-item-content">
             <span class="list-item-distance"><i class="fa-solid fa-car"></i> 22 Miles Away</span>
             <h3 class="list-item-title">Lincoln Memorial &amp; D.C. Mall</h3>
             <p class="list-item-desc">Iconic national memorial located on the National Mall across from the Washington Monument.</p>
             <div class="list-item-address"><i class="fa-solid fa-location-dot"></i> 2 Lincoln Memorial Cir NW, Washington DC 20037</div>
-        <div class="list-item-card">
+          </div>
+        </div>
+
+<div class="list-item-card">
           <img src="assets/images/verizon-center-1024x683.jpg" alt="Capital One Arena" class="list-item-img">
           <div class="list-item-content">
             <span class="list-item-distance"><i class="fa-solid fa-car"></i> 22 Miles Away</span>
             <h3 class="list-item-title">Capital One Arena</h3>
             <p class="list-item-desc">Major indoor arena in Chinatown D.C., home to NBA Wizards, NHL Capitals, and world-class concerts.</p>
             <div class="list-item-address"><i class="fa-solid fa-location-dot"></i> 601 F St NW, Washington DC 20004</div>
-        <div class="list-item-card">
+          </div>
+        </div>
+
+<div class="list-item-card">
           <img src="assets/images/holocaust-memorial-museum-959x516.jpg" alt="Holocaust Memorial Museum" class="list-item-img">
           <div class="list-item-content">
             <span class="list-item-distance"><i class="fa-solid fa-car"></i> 22.1 Miles Away</span>
             <h3 class="list-item-title">Holocaust Memorial Museum</h3>
             <p class="list-item-desc">Official U.S. memorial providing documentation, study, and interpretation of Holocaust history.</p>
             <div class="list-item-address"><i class="fa-solid fa-location-dot"></i> 100 Raoul Wallenberg Pl SW, Washington DC 20024</div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
@@ -154,5 +165,23 @@
   <script>
     document.querySelectorAll('.copyright-year').forEach(el => el.textContent = new Date().getFullYear());
   </script>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+13016273969" class="mobile-sticky-btn mobile-btn-call">
+      <i class="fa-solid fa-phone"></i> Call Hotel
+    </a>
+    <a href="https://live.ipms247.com/booking/book-rooms-executiveinnandsuites" target="_blank" class="mobile-sticky-btn mobile-btn-book">
+      <i class="fa-solid fa-calendar-check"></i> Book Online
+    </a>
+  </div>
+
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
